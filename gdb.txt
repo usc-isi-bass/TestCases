@@ -1,0 +1,228 @@
+Currently logging to "gdb.txt".
+Logs will be appended to the log file.
+Output will be logged and displayed.
+Dump of assembler code for function dissect_mpa_fpdu:
+   0x0000000000000e6b <+0>:	push   %rbp
+   0x0000000000000e6c <+1>:	mov    %rsp,%rbp
+   0x0000000000000e6f <+4>:	push   %rbx
+   0x0000000000000e70 <+5>:	sub    $0x78,%rsp
+   0x0000000000000e74 <+9>:	mov    %rdi,-0x58(%rbp)
+   0x0000000000000e78 <+13>:	mov    %rsi,-0x60(%rbp)
+   0x0000000000000e7c <+17>:	mov    %rdx,-0x68(%rbp)
+   0x0000000000000e80 <+21>:	mov    %rcx,-0x70(%rbp)
+   0x0000000000000e84 <+25>:	mov    %r8,-0x78(%rbp)
+   0x0000000000000e88 <+29>:	mov    %r9d,%eax
+   0x0000000000000e8b <+32>:	mov    %al,-0x7c(%rbp)
+   0x0000000000000e8e <+35>:	movq   $0x0,-0x30(%rbp)
+   0x0000000000000e96 <+43>:	movq   $0x0,-0x28(%rbp)
+   0x0000000000000e9e <+51>:	movq   $0x0,-0x20(%rbp)
+   0x0000000000000ea6 <+59>:	movq   $0x0,-0x18(%rbp)
+   0x0000000000000eae <+67>:	movl   $0x0,-0x38(%rbp)
+   0x0000000000000eb5 <+74>:	movzbl -0x7c(%rbp),%eax
+   0x0000000000000eb9 <+78>:	mov    -0x70(%rbp),%rcx
+   0x0000000000000ebd <+82>:	movslq %eax,%rdx
+   0x0000000000000ec0 <+85>:	mov    %rdx,%rax
+   0x0000000000000ec3 <+88>:	add    %rax,%rax
+   0x0000000000000ec6 <+91>:	add    %rdx,%rax
+   0x0000000000000ec9 <+94>:	shl    $0x2,%rax
+   0x0000000000000ecd <+98>:	add    %rcx,%rax
+   0x0000000000000ed0 <+101>:	add    $0x1c,%rax
+   0x0000000000000ed4 <+105>:	mov    (%rax),%eax
+   0x0000000000000ed6 <+107>:	test   %eax,%eax
+   0x0000000000000ed8 <+109>:	je     0xefe <dissect_mpa_fpdu+147>
+   0x0000000000000eda <+111>:	movzbl -0x7c(%rbp),%edx
+   0x0000000000000ede <+115>:	mov    -0x78(%rbp),%rcx
+   0x0000000000000ee2 <+119>:	mov    -0x70(%rbp),%rax
+   0x0000000000000ee6 <+123>:	mov    %rcx,%rsi
+   0x0000000000000ee9 <+126>:	mov    %rax,%rdi
+   0x0000000000000eec <+129>:	callq  0x5f <get_first_marker_offset>
+   0x0000000000000ef1 <+134>:	test   %eax,%eax
+   0x0000000000000ef3 <+136>:	jne    0xefe <dissect_mpa_fpdu+147>
+   0x0000000000000ef5 <+138>:	movl   $0x4,-0x3c(%rbp)
+   0x0000000000000efc <+145>:	jmp    0xf05 <dissect_mpa_fpdu+154>
+   0x0000000000000efe <+147>:	movl   $0x0,-0x3c(%rbp)
+   0x0000000000000f05 <+154>:	mov    -0x3c(%rbp),%edx
+   0x0000000000000f08 <+157>:	mov    -0x58(%rbp),%rax
+   0x0000000000000f0c <+161>:	mov    %edx,%esi
+   0x0000000000000f0e <+163>:	mov    %rax,%rdi
+   0x0000000000000f11 <+166>:	callq  0xf16 <dissect_mpa_fpdu+171>
+   0x0000000000000f16 <+171>:	mov    %ax,-0x40(%rbp)
+   0x0000000000000f1a <+175>:	movzbl -0x7c(%rbp),%eax
+   0x0000000000000f1e <+179>:	mov    -0x70(%rbp),%rcx
+   0x0000000000000f22 <+183>:	movslq %eax,%rdx
+   0x0000000000000f25 <+186>:	mov    %rdx,%rax
+   0x0000000000000f28 <+189>:	add    %rax,%rax
+   0x0000000000000f2b <+192>:	add    %rdx,%rax
+   0x0000000000000f2e <+195>:	shl    $0x2,%rax
+   0x0000000000000f32 <+199>:	add    %rcx,%rax
+   0x0000000000000f35 <+202>:	add    $0x1c,%rax
+   0x0000000000000f39 <+206>:	mov    (%rax),%eax
+   0x0000000000000f3b <+208>:	test   %eax,%eax
+   0x0000000000000f3d <+210>:	je     0xf59 <dissect_mpa_fpdu+238>
+   0x0000000000000f3f <+212>:	movzbl -0x7c(%rbp),%edx
+   0x0000000000000f43 <+216>:	mov    -0x78(%rbp),%rcx
+   0x0000000000000f47 <+220>:	mov    -0x70(%rbp),%rax
+   0x0000000000000f4b <+224>:	mov    %rcx,%rsi
+   0x0000000000000f4e <+227>:	mov    %rax,%rdi
+   0x0000000000000f51 <+230>:	callq  0x1a0 <number_of_markers>
+   0x0000000000000f56 <+235>:	mov    %eax,-0x38(%rbp)
+   0x0000000000000f59 <+238>:	movzwl -0x40(%rbp),%eax
+   0x0000000000000f5d <+242>:	mov    %eax,%edi
+   0x0000000000000f5f <+244>:	callq  0xb2c <fpdu_pad_length>
+   0x0000000000000f64 <+249>:	mov    %al,-0x41(%rbp)
+   0x0000000000000f67 <+252>:	movzbl -0x7c(%rbp),%edx
+   0x0000000000000f6b <+256>:	mov    -0x78(%rbp),%rcx
+   0x0000000000000f6f <+260>:	mov    -0x70(%rbp),%rax
+   0x0000000000000f73 <+264>:	mov    %rcx,%rsi
+   0x0000000000000f76 <+267>:	mov    %rax,%rdi
+   0x0000000000000f79 <+270>:	callq  0xda6 <expected_ulpdu_length>
+   0x0000000000000f7e <+275>:	mov    %ax,-0x3e(%rbp)
+   0x0000000000000f82 <+279>:	cmpw   $0x0,-0x3e(%rbp)
+   0x0000000000000f87 <+284>:	je     0xf9b <dissect_mpa_fpdu+304>
+   0x0000000000000f89 <+286>:	movzwl -0x3e(%rbp),%eax
+   0x0000000000000f8d <+290>:	movzwl -0x40(%rbp),%ecx
+   0x0000000000000f91 <+294>:	movzbl -0x41(%rbp),%edx
+   0x0000000000000f95 <+298>:	add    %ecx,%edx
+   0x0000000000000f97 <+300>:	cmp    %edx,%eax
+   0x0000000000000f99 <+302>:	je     0xfa5 <dissect_mpa_fpdu+314>
+   0x0000000000000f9b <+304>:	mov    $0x0,%eax
+   0x0000000000000fa0 <+309>:	jmpq   0x11a8 <dissect_mpa_fpdu+829>
+   0x0000000000000fa5 <+314>:	mov    -0x60(%rbp),%rax
+   0x0000000000000fa9 <+318>:	mov    $0x3,%esi
+   0x0000000000000fae <+323>:	mov    %rax,%rdi
+   0x0000000000000fb1 <+326>:	callq  0x7ab <mpa_packetlist>
+   0x0000000000000fb6 <+331>:	mov    0x0(%rip),%esi        # 0xfbc <dissect_mpa_fpdu+337>
+   0x0000000000000fbc <+337>:	mov    -0x58(%rbp),%rdx
+   0x0000000000000fc0 <+341>:	mov    -0x68(%rbp),%rax
+   0x0000000000000fc4 <+345>:	mov    $0x0,%r9d
+   0x0000000000000fca <+351>:	mov    $0xffffffff,%r8d
+   0x0000000000000fd0 <+357>:	mov    $0x0,%ecx
+   0x0000000000000fd5 <+362>:	mov    %rax,%rdi
+   0x0000000000000fd8 <+365>:	callq  0xfdd <dissect_mpa_fpdu+370>
+   0x0000000000000fdd <+370>:	mov    %rax,-0x30(%rbp)
+   0x0000000000000fe1 <+374>:	mov    0x0(%rip),%edx        # 0xfe7 <dissect_mpa_fpdu+380>
+   0x0000000000000fe7 <+380>:	mov    -0x30(%rbp),%rax
+   0x0000000000000feb <+384>:	mov    %edx,%esi
+   0x0000000000000fed <+386>:	mov    %rax,%rdi
+   0x0000000000000ff0 <+389>:	callq  0xff5 <dissect_mpa_fpdu+394>
+   0x0000000000000ff5 <+394>:	mov    %rax,-0x20(%rbp)
+   0x0000000000000ff9 <+398>:	mov    -0x3c(%rbp),%ecx
+   0x0000000000000ffc <+401>:	mov    0x0(%rip),%esi        # 0x1002 <dissect_mpa_fpdu+407>
+   0x0000000000001002 <+407>:	mov    -0x58(%rbp),%rdx
+   0x0000000000001006 <+411>:	mov    -0x20(%rbp),%rax
+   0x000000000000100a <+415>:	mov    $0x0,%r9d
+   0x0000000000001010 <+421>:	mov    $0xffffffff,%r8d
+   0x0000000000001016 <+427>:	mov    %rax,%rdi
+   0x0000000000001019 <+430>:	callq  0x101e <dissect_mpa_fpdu+435>
+   0x000000000000101e <+435>:	mov    %rax,-0x28(%rbp)
+   0x0000000000001022 <+439>:	mov    0x0(%rip),%edx        # 0x1028 <dissect_mpa_fpdu+445>
+   0x0000000000001028 <+445>:	mov    -0x28(%rbp),%rax
+   0x000000000000102c <+449>:	mov    %edx,%esi
+   0x000000000000102e <+451>:	mov    %rax,%rdi
+   0x0000000000001031 <+454>:	callq  0x1036 <dissect_mpa_fpdu+459>
+   0x0000000000001036 <+459>:	mov    %rax,-0x18(%rbp)
+   0x000000000000103a <+463>:	movzwl -0x40(%rbp),%edi
+   0x000000000000103e <+467>:	mov    -0x3c(%rbp),%ecx
+   0x0000000000001041 <+470>:	mov    0x0(%rip),%esi        # 0x1047 <dissect_mpa_fpdu+476>
+   0x0000000000001047 <+476>:	mov    -0x58(%rbp),%rdx
+   0x000000000000104b <+480>:	mov    -0x18(%rbp),%rax
+   0x000000000000104f <+484>:	mov    %edi,%r9d
+   0x0000000000001052 <+487>:	mov    $0x2,%r8d
+   0x0000000000001058 <+493>:	mov    %rax,%rdi
+   0x000000000000105b <+496>:	callq  0x1060 <dissect_mpa_fpdu+501>
+   0x0000000000001060 <+501>:	movzbl -0x7c(%rbp),%eax
+   0x0000000000001064 <+505>:	mov    -0x70(%rbp),%rcx
+   0x0000000000001068 <+509>:	movslq %eax,%rdx
+   0x000000000000106b <+512>:	mov    %rdx,%rax
+   0x000000000000106e <+515>:	add    %rax,%rax
+   0x0000000000001071 <+518>:	add    %rdx,%rax
+   0x0000000000001074 <+521>:	shl    $0x2,%rax
+   0x0000000000001078 <+525>:	add    %rcx,%rax
+   0x000000000000107b <+528>:	add    $0x1c,%rax
+   0x000000000000107f <+532>:	mov    (%rax),%eax
+   0x0000000000001081 <+534>:	test   %eax,%eax
+   0x0000000000001083 <+536>:	je     0x1139 <dissect_mpa_fpdu+718>
+   0x0000000000001089 <+542>:	cmpl   $0x0,-0x38(%rbp)
+   0x000000000000108d <+546>:	je     0x1139 <dissect_mpa_fpdu+718>
+   0x0000000000001093 <+552>:	mov    -0x78(%rbp),%rax
+   0x0000000000001097 <+556>:	mov    %rax,%rdi
+   0x000000000000109a <+559>:	callq  0x13f <fpdu_total_length>
+   0x000000000000109f <+564>:	mov    %eax,-0x34(%rbp)
+   0x00000000000010a2 <+567>:	cmpb   $0x0,-0x41(%rbp)
+   0x00000000000010a6 <+571>:	je     0x10e2 <dissect_mpa_fpdu+631>
+   0x00000000000010a8 <+573>:	movzbl -0x41(%rbp),%ebx
+   0x00000000000010ac <+577>:	movzbl -0x41(%rbp),%edx
+   0x00000000000010b0 <+581>:	mov    -0x34(%rbp),%ecx
+   0x00000000000010b3 <+584>:	mov    -0x78(%rbp),%rax
+   0x00000000000010b7 <+588>:	mov    %ecx,%esi
+   0x00000000000010b9 <+590>:	mov    %rax,%rdi
+   0x00000000000010bc <+593>:	callq  0xb4a <pad_offset>
+   0x00000000000010c1 <+598>:	mov    %eax,%ecx
+   0x00000000000010c3 <+600>:	mov    0x0(%rip),%esi        # 0x10c9 <dissect_mpa_fpdu+606>
+   0x00000000000010c9 <+606>:	mov    -0x58(%rbp),%rdx
+   0x00000000000010cd <+610>:	mov    -0x18(%rbp),%rax
+   0x00000000000010d1 <+614>:	mov    $0x0,%r9d
+   0x00000000000010d7 <+620>:	mov    %ebx,%r8d
+   0x00000000000010da <+623>:	mov    %rax,%rdi
+   0x00000000000010dd <+626>:	callq  0x10e2 <dissect_mpa_fpdu+631>
+   0x00000000000010e2 <+631>:	mov    -0x38(%rbp),%eax
+   0x00000000000010e5 <+634>:	lea    0x0(,%rax,4),%edx
+   0x00000000000010ec <+641>:	movzwl -0x40(%rbp),%eax
+   0x00000000000010f0 <+645>:	add    %eax,%edx
+   0x00000000000010f2 <+647>:	movzbl -0x41(%rbp),%eax
+   0x00000000000010f6 <+651>:	add    %edx,%eax
+   0x00000000000010f8 <+653>:	lea    0x2(%rax),%edi
+   0x00000000000010fb <+656>:	mov    -0x34(%rbp),%eax
+   0x00000000000010fe <+659>:	lea    -0x4(%rax),%ecx
+   0x0000000000001101 <+662>:	mov    -0x70(%rbp),%rdx
+   0x0000000000001105 <+666>:	mov    -0x18(%rbp),%rsi
+   0x0000000000001109 <+670>:	mov    -0x58(%rbp),%rax
+   0x000000000000110d <+674>:	mov    %edi,%r8d
+   0x0000000000001110 <+677>:	mov    %rax,%rdi
+   0x0000000000001113 <+680>:	callq  0xb8d <dissect_fpdu_crc>
+   0x0000000000001118 <+685>:	movzbl -0x7c(%rbp),%edi
+   0x000000000000111c <+689>:	mov    -0x78(%rbp),%rcx
+   0x0000000000001120 <+693>:	mov    -0x70(%rbp),%rdx
+   0x0000000000001124 <+697>:	mov    -0x20(%rbp),%rsi
+   0x0000000000001128 <+701>:	mov    -0x58(%rbp),%rax
+   0x000000000000112c <+705>:	mov    %edi,%r8d
+   0x000000000000112f <+708>:	mov    %rax,%rdi
+   0x0000000000001132 <+711>:	callq  0xca9 <dissect_fpdu_markers>
+   0x0000000000001137 <+716>:	jmp    0x11a4 <dissect_mpa_fpdu+825>
+   0x0000000000001139 <+718>:	movzwl -0x40(%rbp),%edx
+   0x000000000000113d <+722>:	mov    -0x3c(%rbp),%eax
+   0x0000000000001140 <+725>:	add    %edx,%eax
+   0x0000000000001142 <+727>:	add    $0x2,%eax
+   0x0000000000001145 <+730>:	mov    %eax,-0x3c(%rbp)
+   0x0000000000001148 <+733>:	cmpb   $0x0,-0x41(%rbp)
+   0x000000000000114c <+737>:	je     0x117b <dissect_mpa_fpdu+784>
+   0x000000000000114e <+739>:	movzbl -0x41(%rbp),%edi
+   0x0000000000001152 <+743>:	mov    -0x3c(%rbp),%ecx
+   0x0000000000001155 <+746>:	mov    0x0(%rip),%esi        # 0x115b <dissect_mpa_fpdu+752>
+   0x000000000000115b <+752>:	mov    -0x58(%rbp),%rdx
+   0x000000000000115f <+756>:	mov    -0x18(%rbp),%rax
+   0x0000000000001163 <+760>:	mov    $0x0,%r9d
+   0x0000000000001169 <+766>:	mov    %edi,%r8d
+   0x000000000000116c <+769>:	mov    %rax,%rdi
+   0x000000000000116f <+772>:	callq  0x1174 <dissect_mpa_fpdu+777>
+   0x0000000000001174 <+777>:	movzbl -0x41(%rbp),%eax
+   0x0000000000001178 <+781>:	add    %eax,-0x3c(%rbp)
+   0x000000000000117b <+784>:	movzwl -0x40(%rbp),%edx
+   0x000000000000117f <+788>:	movzbl -0x41(%rbp),%eax
+   0x0000000000001183 <+792>:	add    %edx,%eax
+   0x0000000000001185 <+794>:	add    $0x2,%eax
+   0x0000000000001188 <+797>:	mov    %eax,%edi
+   0x000000000000118a <+799>:	mov    -0x3c(%rbp),%ecx
+   0x000000000000118d <+802>:	mov    -0x70(%rbp),%rdx
+   0x0000000000001191 <+806>:	mov    -0x18(%rbp),%rsi
+   0x0000000000001195 <+810>:	mov    -0x58(%rbp),%rax
+   0x0000000000001199 <+814>:	mov    %edi,%r8d
+   0x000000000000119c <+817>:	mov    %rax,%rdi
+   0x000000000000119f <+820>:	callq  0xb8d <dissect_fpdu_crc>
+   0x00000000000011a4 <+825>:	movzwl -0x40(%rbp),%eax
+   0x00000000000011a8 <+829>:	add    $0x78,%rsp
+   0x00000000000011ac <+833>:	pop    %rbx
+   0x00000000000011ad <+834>:	pop    %rbp
+   0x00000000000011ae <+835>:	retq   
+End of assembler dump.
+quit
